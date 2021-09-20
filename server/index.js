@@ -8,7 +8,7 @@ const parser = new serialPort.parsers.Readline({
   delimiter: '\r\n',
 });
 
-const port = new serialPort('COM3', {
+const port = new serialPort('/dev/ttyUSB0', {
   baudRate: 9600,
   dataBits: 8,
   parity: 'none',
@@ -24,5 +24,3 @@ parser.on('data', (data) => {
 });
 
 http.listen(3000, () => console.log('listening on http://localhost:3000'));
-
-// http://192.168.1.8:3000/on
