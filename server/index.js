@@ -4,6 +4,8 @@ const io = require('socket.io')(http, {
   cors: { origin: '*' },
 });
 
+const PORT = 8080;
+
 const parser = new serialPort.parsers.Readline({
   delimiter: '\r\n',
 });
@@ -23,4 +25,4 @@ parser.on('data', (data) => {
   io.emit('data', data);
 });
 
-http.listen(3000, () => console.log('listening on http://localhost:3000'));
+http.listen(PORT, () => console.log(`listening on http://localhost:${PORT}`));
