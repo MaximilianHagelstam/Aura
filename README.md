@@ -9,3 +9,4 @@ This is made for personal use and only works for devices connected to your netwo
 | [arduino](https://github.com/MaximilianHagelstam/aura/tree/master/arduino) |   Arduino script    |
 | [server](https://github.com/MaximilianHagelstam/aura/tree/master/server)   | Raspberry Pi server |
 | [web](https://github.com/MaximilianHagelstam/aura/tree/master/web)         |     Web client      |
+| [mobile](https://github.com/MaximilianHagelstam/aura/tree/master/mobile)   |    Mobile client    |
