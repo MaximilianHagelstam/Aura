@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { Text, SafeAreaView } from 'react-native';
+import { Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import io from 'socket.io-client';
 
@@ -15,21 +15,16 @@ export default function App() {
   });
 
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={{ flex: 1, backgroundColor: '#FCB89D' }}>
-        <LinearGradient
-          colors={['#FCB89D', '#A871EF']}
-          style={{
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <Text style={{ color: 'white', fontSize: 64 }}>{data}°</Text>
-        </LinearGradient>
-      </SafeAreaView>
-      <SafeAreaView style={{ flex: 0, backgroundColor: '#A871EF' }} />
-    </>
+    <LinearGradient
+      colors={['#FCB89D', '#A871EF']}
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Text style={{ color: 'white', fontSize: 64 }}>{data}°</Text>
+      <StatusBar style="auto" />
+    </LinearGradient>
   );
 }
