@@ -1,6 +1,6 @@
 #include "DHT.h"
 
-#define DHTPIN 7
+#define DHTPIN 2
 #define DHTTYPE DHT11
 
 DHT dht(DHTPIN, DHTTYPE);
@@ -13,5 +13,5 @@ void setup() {
 void loop() {
   float temperature = dht.readTemperature();
   Serial.println(temperature);
-  delay(100);
+  delay(1000);
 }
