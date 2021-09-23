@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>{data}</Text>
+      <Text style={styles.tempText}>{data}°</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -28,5 +28,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  tempText: {
+    fontSize: 64,
+    color: '#000',
   },
 });
