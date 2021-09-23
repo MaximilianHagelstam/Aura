@@ -23,7 +23,7 @@ export default function App() {
         alignItems: 'center',
       }}
     >
-      <Text style={{ color: 'white', fontSize: 64 }}>{data}°</Text>
+      <Text style={{ color: 'white', fontSize: 80 }}>{data}°</Text>
       <StatusBar style="auto" />
     </LinearGradient>
   );
