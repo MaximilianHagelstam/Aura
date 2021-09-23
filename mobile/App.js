@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, SafeAreaView } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import io from 'socket.io-client';
 
 export default function App() {
@@ -9,28 +10,26 @@ export default function App() {
   useEffect(() => {
     const socket = io('ws://192.168.1.6:8080');
     socket.on('data', (data) => {
-      // TODO: PayloadTooLargeError: request entity too large
       setData(data);
     });
   });
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.tempText}>{data}°</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView style={{ flex: 1, backgroundColor: '#FCB89D' }}>
+        <LinearGradient
+          colors={['#FCB89D', '#A871EF']}
+          style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Text style={{ color: 'white', fontSize: 64 }}>{data}°</Text>
+        </LinearGradient>
+      </SafeAreaView>
+      <SafeAreaView style={{ flex: 0, backgroundColor: '#A871EF' }} />
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  tempText: {
-    fontSize: 64,
-    color: '#000',
-  },
-});
