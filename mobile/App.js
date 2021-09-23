@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <LinearGradient
-      colors={['#FCB89D', '#A871EF']}
+      colors={['#FCA3A4', '#FD8CAD']}
       style={{
         flex: 1,
         justifyContent: 'center',
