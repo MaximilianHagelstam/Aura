@@ -14,7 +14,7 @@ This is made for personal use and only works for devices connected to your netwo
 | [server](https://github.com/MaximilianHagelstam/aura/tree/master/server)   | Raspberry Pi server |
 | [mobile](https://github.com/MaximilianHagelstam/aura/tree/master/mobile)   |  React Native app   |
 
-# Architecture
+## Architecture
 
 <img src="architecture.png" alt="screenshot" >
 
