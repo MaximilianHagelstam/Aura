@@ -17,3 +17,7 @@ This is made for personal use and only works for devices connected to your netwo
 # Architecture
 
 <img src="architecture.png" alt="screenshot" >
+
+## License
+
+This project is licensed under the terms of the [MIT](https://choosealicense.com/licenses/mit/) license.
